@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple arithmetic</title>
+</head>
+<body>
+
+    <form>
+        <label>Número 1:</label> 
+            <input id="num1" type="number" />
+        <br/><br/>
+        <label> Número 2:</label> 
+            <input id="num2" type="number" />
+        <br/><br />
+        <label >Operdor</label>
+        <input id="operador" type="text">
+        <br/><br /> 
+        <p id="resultado" style="color: green;"></p>
+        <button onclick="execute()">Click me</button>              
+    </form>        
+
+    <script>
+        function execute(){
+           //arithmetic(x, y, operador);
+           let num1 = document.getElementById("num1").value;
+           let num2 = document.getElementById("num2").value;
+           let operador = document.getElementById("operador").value;
+           
+           let resultado = simpleArithmetic(parseInt(num1),parseInt(num2),operador);
+           document.getElementById('resultado').innerHTML="<span style='color: green;'>"+resultado+"</span>";    
+       } 
+
+       function arithmetic(x, y , opr) {
+           console.log(eval("x"+ opr +"y"));             
+        }
+
+        function simpleArithmetic(a, b, expr){
+           switch (expr){
+                case '+':
+                return a + b;
+                //document.write("<P>res ", a + b);
+                break;
+
+                case '-':
+                return a - b;
+                break;
+
+                case '*':
+                return a * b;
+                break;
+
+                case '/':
+                return a / b;
+                break;
+
+                default:
+                return 'operador no valido';
+           }
+        }
+         
+    </script>    
+</body>
+</html>

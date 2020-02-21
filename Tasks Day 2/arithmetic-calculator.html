@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arithmetic calculator</title>
+</head>
+<body>
+
+    <form>
+        <input id="exprecion" type="text">
+        <br/><br /> 
+        <p id="resultado" style="color: green;"></p>
+        <button onclick="execute()">Click me</button>              
+    </form>        
+
+    <script>
+        function execute(){
+           let exp = document.getElementById("exprecion").value;
+                      
+           let resultado = arithmetic(exp);
+           console.log(resultado);
+           document.getElementById('resultado').innerHTML="<span style='color: green;'>"+resultado+"</span>";    
+       } 
+
+       
+       function arithmetic(exp) {
+           return eval(exprecion); 
+        }
+         
+    </script>    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fibonacci Console</title>
+</head>
+<body>
+
+        <button onclick="execute()">Click me</button>
+
+    <script>
+       function execute(){
+           let num =5;
+           console.log(fibonacci(num));
+       } 
+
+       function fibonacci(num) {
+            let array = [];
+            var a = 1, b = 0, temp;
+
+        while (num >= 0){
+            temp = a;
+            a = a + b;
+            b = temp;
+            num--;
+            array.push(b);            
+        }
+                  
+            console.log(array);
+            return b; 
+        }
+         
+    </script>
+</body>
+</html>
